@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Healing Beach Coaching Quiz – Discover which kind of support is right for your healing journey." />
+  <title>Healing Beach | Quiz & Results</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0 1rem;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #4a90e2;
+      padding-top: 2rem;
+    }
+    form {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 1.5rem;
+    }
+    legend {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+    button {
+      display: block;
+      margin: 2rem auto 0;
+      background: #f9b3a6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .book-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #f9b3a6;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .results {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav {
+      background: rgba(74, 144, 226, 0.9);
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    footer a {
+      color: #f9b3a6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#results">Results</a>
+  </nav>
+
+  <h1 id="quiz">Your Healing Path Quiz</h1>
+  <form id="healing-quiz">
+    <fieldset>
+      <legend>1. What support are you seeking at the moment?</legend>
+      <label><input type="radio" name="q1" data-path="total"> I need a full reset, in mind, body, and spirit.</label>
+      <label><input type="radio" name="q1" data-path="training"> I want to get stronger, lose weight, or otherwise reconnect with my body.</label>
+      <label><input type="radio" name="q1" data-path="coaching"> I want clarity, direction, and guidance on my health and wellness.</label>
+      <label><input type="radio" name="q1" data-path="energy"> I want an emotional recharging.</label>
+    </fieldset>
+    <fieldset>
+      <legend>2. How does stress affect you?</legend>
+      <label><input type="radio" name="q2" data-path="total"> It hits everywhere! I get overwhelmed in body and mind.</label>
+      <label><input type="radio" name="q2" data-path="energy"> I feel drained, disconnected, and/or emotionally sensitive.</label>
+      <label><input type="radio" name="q2" data-path="coaching"> My mind races and/or I completely shut down.</label>
+      <label><input type="radio" name="q2" data-path="training"> I get tense and restless, needing to blow off steam.</label>
+    </fieldset>
+    <fieldset>
+      <legend>3. What resources are you most interested in?</legend>
+      <label><input type="radio" name="q3" data-path="training"> Meal plans and exercise guides.</label>
+      <label><input type="radio" name="q3" data-path="coaching"> Tools for managing mindset, habits, emotions, and/or focus.</label>
+      <label><input type="radio" name="q3" data-path="energy"> Chakra and energy healing education, meditation guides, and spiritual tools.</label>
+      <label><input type="radio" name="q3" data-path="total"> I am interested in all of these resources.</label>
+    </fieldset>
+    <fieldset>
+      <legend>4. Which statement resonates with you most?</legend>
+      <label><input type="radio" name="q4" data-path="total"> I'm ready to take aligned action and create momentum.</label>
+      <label><input type="radio" name="q4" data-path="energy"> I want a deeper connection with my spirit and intuition.</label>
+      <label><input type="radio" name="q4" data-path="training"> I want to reconnect with my body and improve my physical health.</label>
+      <label><input type="radio" name="q4" data-path="coaching"> I want to understand myself better and improve my emotional health.</label>
+    </fieldset>
+    <fieldset>
+      <legend>5. What are you really hoping to get out of this journey?</legend>
+      <label><input type="radio" name="q5" data-path="energy"> Energetic balance, peace, and a sense of spiritual connection.</label>
+      <label><input type="radio" name="q5" data-path="total"> A total shift, I'm ready to invest in deep, lasting change.</label>
+      <label><input type="radio" name="q5" data-path="coaching"> Support, accountability, and resources to stay on track.</label>
+      <label><input type="radio" name="q5" data-path="training"> More strength, movement, and confidence in my body.</label>
+    </fieldset>
+    <button type="submit">Reveal My Results</button>
+  </form>
+
+<div id="results">
+  <div id="results-coaching" class="results" style="display:none;">
+    <h2>Your Path: Health & ADHD Coaching</h2>
+    <p>You’re ready for results, clarity, and support that meets you where you are. Health coaching can help simplify what feels overwhelming and create routines that stick and make an impact. Let’s unlock progress in a way that works for your unique situation and fits into your lifestyle.</p>
+    <a href="https://calendly.com/healingbeach/full-session" class="book-btn" target="_blank">Book Now</a>
+  </div>
+
+  <div id="results-training" class="results" style="display:none;">
+    <h2>Your Path: Personal Training</h2>
+    <p>Your body is calling for movement, strength, and reconnection. These sessions focus on intentional, energizing movement that meets your current rhythm. You’ll build confidence and feel more grounded, with encouragement and motivation every step of the way.</p>
+    <a href="https://calendly.com/healingbeach/full-session" class="book-btn" target="_blank">Book Now</a>
+  </div>
+
+  <div id="results-energy" class="results" style="display:none;">
+    <h2>Your Path: Energy Healing & Reiki</h2>
+    <p>You’re seeking calm, alignment, and energetic clarity. Reiki and intuitive healing can help you release what no longer serves you and restore inner balance. Healing can feel gentle, sacred, and deeply supportive.</p>
+    <a href="https://calendly.com/healingbeach/reiki" class="book-btn" target="_blank">Book Now</a>
+  </div>
+
+  <div id="results-total" class="results" style="display:none;">
+    <h2>Your Path: Total Transformation</h2>
+    <p>You’re ready for lasting change across mind, body, and spirit. This blended path brings together movement, mindset, and energy healing in a way that is personalized and powerful. You don’t have to choose one method, you get it all.</p>
+    <a href="https://calendly.com/healingbeach/full-session" class="book-btn" target="_blank">Book Now</a>
+  </div>
+</div>
+
+
+  <script>
+  document.getElementById('healing-quiz').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const responses = document.querySelectorAll('input[type="radio"]:checked');
+    const counts = {};
+
+    responses.forEach((input) => {
+      const path = input.dataset.path;
+      counts[path] = (counts[path] || 0) + 1;
+    });
+
+    let bestMatch = 'total'; // default fallback to combined services
+    let highestCount = 0;
+
+    // Find the path with the most responses
+    for (const path in counts) {
+      if (counts[path] > highestCount) {
+        highestCount = counts[path];
+        bestMatch = path;
+      }
+    }
+
+    // If the top category has less than 3 selections, default to total
+    if (highestCount < 3) {
+      bestMatch = 'total';
+    }
+
+    // Hide all result sections
+    document.querySelectorAll('.results').forEach(div => div.style.display = 'none');
+
+    // Show and scroll to the selected result
+    const resultDiv = document.getElementById(`results-${bestMatch}`);
+    if (resultDiv) {
+      resultDiv.style.display = 'block';
+      resultDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+
+  <footer
+    <p>&copy; 2025 Healing Beach • Myrtle Beach, SC</p>
+<p>
+  <a href="contact.html">Contact</a> |
+  <a href="#">Instagram</a> |
+  <a href="#">Facebook</a> |
+  <a href="privacy.html">Privacy Policy</a>
+</p>
+    <p style="margin-top: 1rem; font-size: 0.85rem; color: #ccc;">
+      All services are wellness-based and not a substitute for licensed medical or psychological care.
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Healing Beach. Reach out with questions, support requests, or to start your healing journey.">
+  <title>Contact | Healing Beach</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0 1rem;
+    }
+    nav {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #4a90e2;
+      font-weight: bold;
+    }
+    header {
+      background: rgba(74, 144, 226, 0.9);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .contact-box {
+      background: rgba(230, 240, 250, 0.95);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    h2 {
+      text-align: center;
+      color: #4a90e2;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background: #f9b3a6;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    footer a {
+      color: #f9b3a6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Let’s Connect</h1>
+    <p>Have a question, need support, or want to explore your next step? I’d love to hear from you.</p>
+  </header>
+
+  <section class="contact-box">
+    <h2>Contact Form</h2>
+    <p style="text-align: center; margin-bottom: 2rem;">Fill out the form below and I’ll get back to you soon.</p>
+    <form action="mailto:healingbeach444@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+      <textarea name="message" placeholder="How can I support you?" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="thank-you-message" style="display:none; text-align:center; margin-top: 1.5rem; font-size:1.1rem; color:#4a90e2;">
+      Thank you! Your message has been received. I’ll be in touch soon. -Elle
+    </div>
+  </section>
+
+  <footer
+    <p>&copy; 2025 Healing Beach • Myrtle Beach, SC</p>
+<p>
+  <a href="contact.html">Contact</a> |
+  <a href="#">Instagram</a> |
+  <a href="#">Facebook</a> |
+  <a href="privacy.html">Privacy Policy</a>
+</p>
+    <p style="margin-top: 1rem; font-size: 0.85rem; color: #ccc;">
+      All services are wellness-based and not a substitute for licensed medical or psychological care.
+    </p>
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    const thankYouMessage = document.getElementById("thank-you-message");
+
+    form.addEventListener("submit", function () {
+      thankYouMessage.style.display = "block";
+      setTimeout(() => {
+        thankYouMessage.style.display = "none";
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
