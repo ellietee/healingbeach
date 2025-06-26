@@ -12,7 +12,6 @@
       background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
       background-size: cover;
       color: #333;
-      margin: 0;
       padding: 0 1rem;
     }
     nav {
@@ -101,11 +100,16 @@
   <section class="contact-box">
     <h2>Contact Form</h2>
     <p style="text-align: center; margin-bottom: 2rem;">Fill out the form below and I’ll get back to you soon.</p>
-    <form action="mailto:healingbeach444@gmail.com" method="POST" enctype="text/plain">
+    <form action="https://formsubmit.co/healingbeach444@gmail.com" method="POST" onsubmit="showThankYou();">
       <input type="text" name="name" placeholder="Full Name" required />
       <input type="email" name="email" placeholder="Email Address" required />
       <input type="tel" name="phone" placeholder="Phone Number (optional)" />
       <textarea name="message" placeholder="How can I support you?" rows="5" required></textarea>
+
+      <!-- Formsubmit hidden fields -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://healingbeach.org/contact.html" />
+
       <button type="submit">Send Message</button>
     </form>
     <div id="thank-you-message" style="display:none; text-align:center; margin-top: 1.5rem; font-size:1.1rem; color:#4a90e2;">
@@ -113,14 +117,14 @@
     </div>
   </section>
 
-  <footer
+  <footer>
     <p>&copy; 2025 Healing Beach • Myrtle Beach, SC</p>
-<p>
-  <a href="contact.html">Contact</a> |
-  <a href="#">Instagram</a> |
-  <a href="#">Facebook</a> |
-  <a href="privacy.html">Privacy Policy</a>
-</p>
+    <p>
+      <a href="contact.html">Contact</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
     <p style="margin-top: 1rem; font-size: 0.85rem; color: #ccc;">
       All services are wellness-based and not a substitute for licensed medical or psychological care.
     </p>
@@ -136,6 +140,14 @@
         thankYouMessage.style.display = "none";
       }, 5000);
     });
+
+    function showThankYou() {
+      setTimeout(() => {
+        form.style.display = "none";
+        thankYouMessage.style.display = "block";
+      }, 300);
+    }
   </script>
 </body>
 </html>
+
