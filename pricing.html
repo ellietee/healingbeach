@@ -176,6 +176,54 @@
     </div>
   </section>
 
+<section id="reviews" style="
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  margin: 3rem auto;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+">
+  <h2 style="color: #e5989b; font-size: 1.8rem; margin-bottom: 1rem;">Client Love</h2>
+  <p id="reviewText" style="font-size: 1.3rem; font-style: italic; color: #444; transition: opacity 1s ease-in-out;">Loading review...</p>
+  <span id="reviewAuthor" style="display: block; margin-top: 1rem; font-weight: bold; color: #a25f6b;"></span>
+</section>
+
+<script>
+  const reviews = [
+    { text: "Elle has a true gift. This is her calling.", author: "– Emily" },
+    { text: "Great guidance to help me get stronger.", author: "– N.D." },
+    { text: "Elle creates a safe space to heal.", author: "– Lauren" },
+    { text: "I feel more grounded and less anxious.", author: "– L.K." },
+  ];
+
+  const reviewText = document.getElementById("reviewText");
+  const reviewAuthor = document.getElementById("reviewAuthor");
+
+  function updateReview() {
+    // Fade out
+    reviewText.style.opacity = 0;
+    reviewAuthor.style.opacity = 0;
+
+    setTimeout(() => {
+      const randomReview = reviews[Math.floor(Math.random() * reviews.length)];
+      reviewText.textContent = `"${randomReview.text}"`;
+      reviewAuthor.textContent = randomReview.author;
+      // Fade in
+      reviewText.style.opacity = 1;
+      reviewAuthor.style.opacity = 1;
+    }, 1000);
+  }
+
+  // Show the first review right away
+  updateReview();
+
+  // Rotate every 10 seconds
+  setInterval(updateReview, 10000);
+</script>
+
+  
   <section class="package-group">
     <h2>Reiki Packages</h2>
     <div class="package">
